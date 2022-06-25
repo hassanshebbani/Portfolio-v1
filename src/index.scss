@@ -1,3 +1,119 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./scss/mixins";
+@import "./scss/variables";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@200;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Bungee+Shade");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    // font-family: "Poppins", sans-serif;
+    // font-family: "Roboto Mono", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+button {
+  cursor: none;
+  @media screen and (max-width: 500px) {
+    cursor: auto;
+  }
+}
+
+a {
+    text-decoration: none;
+    cursor: none;
+    @media screen and (max-width: 500px) {
+    cursor: auto;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1.25rem;
+  background: rgba(54, 54, 54, 0.192);
+  border-radius: 2rem;
+  @media screen and (max-width: 500px) {
+    width: 0.75rem;
+  }
+}
+::-webkit-scrollbar-thumb {
+    width: 0.4rem;
+    background: rgba(0, 255, 255, 0.514);
+    border-radius: 2rem;
+}
+
+section {
+  cursor: none;
+  @media screen and (max-width: 767px) {
+    cursor: auto;
+    padding: 2rem;
+  }
+  margin-bottom: 1rem;
+  @include flex(column, center, center);
+  background: transparent !important;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  color: white;
+  min-height: 100vh;
+  overflow: auto !important;
+  // padding: 2rem;
+  @media screen and (min-width: 767px) {
+    width: 80%;
+    margin: auto;
+  }
+  h2 {
+    font-size: clamp($small-heading, 2vw, $big-heading);
+    font-family: "Bungee Shade", sans-serif;
+    text-align: center;
+    margin-bottom: 3rem;
+    span {
+      color: rgb(20, 219, 20);
+      font-weight: bold;
+    }
+  }
+  .section-subtitle {
+    font-size: clamp($medium-fs, 2vw, $big-fs);
+    text-align: center;
+  }
+}
+
+
+.cta{
+  cursor: none;
+  @media screen and (max-width: 500px) {
+    cursor: auto;
+  }
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  background: rgb(2, 184, 184);
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 1rem 2rem rgba(0, 255, 255, 0.1), 0 1rem 2rem rgba(0, 255, 255, 0.3);
+  span {
+    margin-right: 2rem;
+  }
+}
+
+body {
+  cursor: none;
+  @media screen and (max-width: 500px) {
+    cursor: auto;
+  }
+    color: white;
+    background: #090909;
+    overflow-x: hidden;
+}
